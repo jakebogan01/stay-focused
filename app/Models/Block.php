@@ -19,4 +19,12 @@ class Block extends Model
     {
         return $this->belongsToMany(User::class);
     }
+
+    /**
+     * @return BelongsToMany
+     */
+    public function tasks(): BelongsToMany
+    {
+        return $this->belongsToMany(Task::class, 'task_block', 'block_id', 'task_id');
+    }
 }

@@ -65,7 +65,7 @@ class User extends Authenticatable
     /**
      * @return BelongsToMany
      */
-    public function skills(): BelongsToMany
+    public function blocks(): BelongsToMany
     {
         return $this->belongsToMany(Block::class, 'block_user', 'user_id', 'block_id');
     }
