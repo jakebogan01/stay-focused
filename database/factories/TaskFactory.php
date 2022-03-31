@@ -6,7 +6,7 @@ use App\Models\Task;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Task>
+ * @extends Factory
  */
 class TaskFactory extends Factory
 {
@@ -27,7 +27,7 @@ class TaskFactory extends Factory
         return [
             'category' => $this->faker->word(),
             'status' => $this->faker->word(),
-            'title' => $this->faker->words(),
+            'title' => $this->faker->words(3, true),
             'description' => $this->faker->sentence(),
             'note' => $this->faker->sentence(),
             'priority_rating' => $this->faker->numberBetween($min = 1, $max = 3),

@@ -22,7 +22,7 @@ return new class extends Migration
             $table->text('note');
             $table->integer('priority_rating');
             $table->integer('allotted_time');
-            $table->string('colors');
+            $table->string('colors')->unique();
             $table->boolean('more_time');
             $table->timestamps();
             $table->softDeletes();
