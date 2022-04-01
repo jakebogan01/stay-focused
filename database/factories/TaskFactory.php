@@ -31,7 +31,7 @@ class TaskFactory extends Factory
             'description' => $this->faker->sentence(),
             'note' => $this->faker->sentence(),
             'priority_rating' => $this->faker->numberBetween($min = 1, $max = 3),
-            'allotted_time' => $this->faker->time(),
+            'allotted_time' => $this->faker->time('1:00:00'),
             'colors' => $this->faker->word(),
             'more_time' => $this->faker->boolean($chanceOfGettingTrue = 50),
 

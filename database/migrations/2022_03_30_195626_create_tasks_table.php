@@ -21,11 +21,11 @@ return new class extends Migration
             $table->text('description');
             $table->text('note');
             $table->integer('priority_rating');
-            $table->integer('allotted_time');
-            $table->string('colors')->unique();
+            $table->time('allotted_time');
+            $table->string('colors');
             $table->boolean('more_time');
-            $table->timestamps();
             $table->softDeletes();
+            $table->timestamps();
         });
     }
 

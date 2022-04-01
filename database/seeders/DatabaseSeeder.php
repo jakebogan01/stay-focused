@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Block;
+use App\Models\Task;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -19,6 +20,11 @@ class DatabaseSeeder extends Seeder
 
         User::factory()
             ->hasAttached(Block::factory()->count(5))
+            ->count(2)
+            ->create();
+
+        Block::factory()
+            ->hasAttached(Task::factory()->count(5))
             ->count(2)
             ->create();
     }
