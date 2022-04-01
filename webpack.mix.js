@@ -17,7 +17,9 @@ mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [
         require('postcss-import'),
         require('tailwindcss'),
-    ]).browserSync({
+    ])
+    .sass("resources/sass/main.sass", "public/css")
+    .browserSync({
         proxy: 'https://' + domain,
         // notify: {
         //     styles: {

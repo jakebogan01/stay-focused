@@ -1,0 +1,16 @@
+/* mixins */
+
+//map
+$breakpoints-up: ('n475': '29.6875rem')
+
+$breakpoints-down: ('n475': '29.6875rem')
+
+//mobile to desktop
+@mixin breakpoint-up($size)
+    @media (min-width: map-get($breakpoints-up, $size))
+        @content
+
+//desktop to mobile
+@mixin breakpoint-down($size)
+    @media (max-width: map-get($breakpoints-down, $size))
+        @content
