@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Category;
 use App\Models\Task;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -25,12 +26,12 @@ class TaskFactory extends Factory
     public function definition()
     {
         return [
-            'category' => $this->faker->word(),
+            'category_id' => $this->faker->numberBetween(1, 3),
             'status' => $this->faker->word(),
             'title' => $this->faker->words(3, true),
             'description' => $this->faker->sentence(),
             'note' => $this->faker->sentence(),
-            'priority_rating' => $this->faker->numberBetween($min = 1, $max = 3),
+            'priority_rating' => $this->faker->numberBetween(1, 3),
             'allotted_time' => $this->faker->time('1:00:00'),
             'colors' => $this->faker->word(),
             'more_time' => $this->faker->boolean($chanceOfGettingTrue = 50),
