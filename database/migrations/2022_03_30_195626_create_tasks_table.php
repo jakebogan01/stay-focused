@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
             $table->foreignId('category_id');
+            $table->foreignId('color_id');
             $table->string('status');
             $table->string('title');
             $table->text('description');

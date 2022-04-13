@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Block;
 use App\Models\Category;
+use App\Models\Color;
 use App\Models\Task;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -30,5 +31,7 @@ class DatabaseSeeder extends Seeder
             ->create();
 
         Category::factory()->count(3)->create();
+        Color::factory()->count(3)->create();
+
     }
 }

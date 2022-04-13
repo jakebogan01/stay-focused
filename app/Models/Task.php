@@ -28,4 +28,13 @@ class Task extends Model
     {
         return $this->belongsTo(Category::class);
     }
+
+    /**
+     * @return BelongsTo
+     */
+    public function colors(): BelongsTo
+    {
+        return $this->belongsTo(Color::class);
+    }
+
 }
