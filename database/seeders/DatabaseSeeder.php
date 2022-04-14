@@ -2,11 +2,12 @@
 
 namespace Database\Seeders;
 
-use App\Models\Block;
-use App\Models\Category;
-use App\Models\Color;
 use App\Models\Task;
 use App\Models\User;
+use App\Models\Block;
+use App\Models\Color;
+use App\Models\Category;
+use App\Models\PriorityRating;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -18,8 +19,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-//        User::factory(10)->create();
-
         User::factory()
             ->hasAttached(Block::factory()->count(5))
             ->count(2)
@@ -32,6 +31,6 @@ class DatabaseSeeder extends Seeder
 
         Category::factory()->count(3)->create();
         Color::factory()->count(3)->create();
-
+        PriorityRating::factory()->count(3)->create();
     }
 }

@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Color extends Model
+class PriorityRating extends Model
 {
-    use softDeletes;
     use HasFactory;
+    use SoftDeletes;
 
     /**
      * @return HasMany

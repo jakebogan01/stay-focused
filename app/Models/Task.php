@@ -37,4 +37,11 @@ class Task extends Model
         return $this->belongsTo(Color::class);
     }
 
+    /**
+     * @return BelongsTo
+     */
+    public function ratings(): BelongsTo
+    {
+        return $this->belongsTo(PriorityRating::class);
+    }
 }
