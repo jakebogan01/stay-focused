@@ -2,20 +2,20 @@
 
 namespace Database\Factories;
 
-use App\Models\PriorityRating;
+use App\Models\Status;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
  * @extends Factory
  */
-class PriorityRatingFactory extends Factory
+class StatusFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = PriorityRating::class;
+    protected $model = Status::class;
 
     /**
      * Define the model's default state.
@@ -24,10 +24,10 @@ class PriorityRatingFactory extends Factory
      */
     public function definition()
     {
-        $ratings = ['High' => 0, 'Medium' => 1, 'Low' => 2];
+        $statuses = ['Completed' => 0, 'In Progress' => 1, 'Pending' => 2];
 
         return [
-            'name' => array_rand($ratings),
+            'name' => array_rand($statuses),
         ];
     }
 }

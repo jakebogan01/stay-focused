@@ -6,6 +6,7 @@ use App\Models\Task;
 use App\Models\User;
 use App\Models\Block;
 use App\Models\Color;
+use App\Models\Status;
 use App\Models\Category;
 use App\Models\PriorityRating;
 use Illuminate\Database\Seeder;
@@ -32,5 +33,6 @@ class DatabaseSeeder extends Seeder
         Category::factory()->count(3)->create();
         Color::factory()->count(3)->create();
         PriorityRating::factory()->count(3)->create();
+        Status::factory()->count(3)->create();
     }
 }

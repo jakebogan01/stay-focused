@@ -44,4 +44,12 @@ class Task extends Model
     {
         return $this->belongsTo(PriorityRating::class);
     }
+
+    /**
+     * @return BelongsTo
+     */
+    public function statuses(): BelongsTo
+    {
+        return $this->belongsTo(Status::class);
+    }
 }

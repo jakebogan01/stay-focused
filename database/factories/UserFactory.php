@@ -24,7 +24,7 @@ class UserFactory extends Factory
      */
     public function definition()
     {
-        $roles = ['member' => 0, 'admin' => 1];
+        $roles = ['Member' => 0, 'Admin' => 1];
 
         return [
             'role' => array_rand($roles),
