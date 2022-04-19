@@ -26,22 +26,15 @@
                     </div>
 
                     <fieldset class="mt-6">
-{{--                        <div class="space-y-4">--}}
-{{--                            <div class="flex items-start">--}}
-{{--                                <div class="h-5 flex items-center">--}}
-{{--                                    <input id="comments" name="comments" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">--}}
-{{--                                </div>--}}
-{{--                                <div class="ml-3 text-sm">--}}
-{{--                                    <label for="comments" class="font-medium text-gray-700">Forgiving</label>--}}
-{{--                                    <p class="text-gray-500">When current task is completed, you'll be asked for more time on that specific task.</p>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-
-                        <div class="flex justify-center">
-                            <div class="form-check form-switch">
-                                <input class="form-check-input appearance-none w-9 -ml-10 rounded-full float-left h-5 align-top bg-white bg-no-repeat bg-contain bg-gray-300 focus:outline-none cursor-pointer shadow-sm" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                                <label class="form-check-label inline-block text-gray-800" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="h-5 flex items-center">
+                                    <input id="comments" name="comments" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                                </div>
+                                <div class="ml-3 text-sm">
+                                    <label for="comments" class="font-medium text-gray-700">Forgiving</label>
+                                    <p class="text-gray-500">When current task is completed, you'll be asked for more time on that specific task.</p>
+                                </div>
                             </div>
                         </div>
                     </fieldset>
