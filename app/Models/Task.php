@@ -24,7 +24,7 @@ class Task extends Model
     /**
      * @return BelongsTo
      */
-    public function categories(): BelongsTo
+    public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class);
     }
@@ -32,7 +32,7 @@ class Task extends Model
     /**
      * @return BelongsTo
      */
-    public function colors(): BelongsTo
+    public function color(): BelongsTo
     {
         return $this->belongsTo(Color::class);
     }
@@ -40,15 +40,15 @@ class Task extends Model
     /**
      * @return BelongsTo
      */
-    public function ratings(): BelongsTo
+    public function priority(): BelongsTo
     {
-        return $this->belongsTo(PriorityRating::class);
+        return $this->belongsTo(Priority::class);
     }
 
     /**
      * @return BelongsTo
      */
-    public function statuses(): BelongsTo
+    public function status(): BelongsTo
     {
         return $this->belongsTo(Status::class);
     }

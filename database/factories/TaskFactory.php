@@ -26,14 +26,14 @@ class TaskFactory extends Factory
     {
         return [
             'category_id' => $this->faker->numberBetween(1, 3),
-            'color_id' => $this->faker->numberBetween(1, 10),
-            'priority_rating_id' => $this->faker->numberBetween(1, 10),
-            'status_id' => $this->faker->numberBetween(1, 10),
+            'color_id' => $this->faker->numberBetween(1, 3),
+            'priority_id' => $this->faker->numberBetween(1, 3),
+            'status_id' => $this->faker->numberBetween(1, 3),
             'title' => $this->faker->words(3, true),
             'description' => $this->faker->sentence(),
             'note' => $this->faker->sentence(),
             'allotted_time' => $this->faker->time('1:00:00'),
-            'more_time' => $this->faker->boolean($chanceOfGettingTrue = 50),
+            'more_time' => $this->faker->boolean(50),
         ];
     }
 }

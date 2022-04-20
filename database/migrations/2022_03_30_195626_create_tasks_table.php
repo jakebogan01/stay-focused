@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('category_id');
             $table->foreignId('color_id');
-            $table->foreignId('priority_rating_id');
+            $table->foreignId('priority_id');
             $table->foreignId('status_id');
             $table->string('title');
             $table->text('description');

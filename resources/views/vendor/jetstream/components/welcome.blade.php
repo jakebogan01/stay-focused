@@ -180,6 +180,18 @@
                             <th scope="col" class="px-4 py-3.5 text-left text-sm font-semibold text-gray-900">
                                 Note
                             </th>
+                            <th scope="col" class="px-4 py-3.5 text-left text-sm font-semibold text-gray-900">
+                                Category
+                            </th>
+                            <th scope="col" class="px-4 py-3.5 text-left text-sm font-semibold text-gray-900">
+                                Status
+                            </th>
+                            <th scope="col" class="px-4 py-3.5 text-left text-sm font-semibold text-gray-900">
+                                Priority Rating
+                            </th>
+                            <th scope="col" class="px-4 py-3.5 text-left text-sm font-semibold text-gray-900">
+                                Color
+                            </th>
                             <th scope="col" class="py-3.5 pl-4 pr-4 text-left text-sm font-semibold text-gray-900 sm:pr-6">
                                 Allotted Time
                             </th>
@@ -200,6 +212,18 @@
                                 <td class="whitespace-nowrap p-4 text-sm text-gray-500">
                                     {{ $info->note }}
                                 </td>
+                                <td class="whitespace-nowrap p-4 text-sm text-gray-500">
+                                    {{ $info->category->name }}
+                                </td>
+                                <td class="whitespace-nowrap p-4 text-sm text-gray-500">
+                                    {{ $info->status->name }}
+                                </td>
+                                <td class="whitespace-nowrap p-4 text-sm text-gray-500">
+                                    {{ $info->priority->name }}
+                                </td>
+                                <td class="whitespace-nowrap p-4 text-sm text-gray-500">
+                                    {{ $info->color->name }}
+                                </td>
                                 <td class="whitespace-nowrap py-4 pl-4 pr-4 text-sm text-gray-500 sm:pr-6">
                                     {{ $info->allotted_time }}
                                 </td>
@@ -212,4 +236,3 @@
         </div>
     </div>
 </div>
-

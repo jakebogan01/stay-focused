@@ -24,8 +24,10 @@ class ColorFactory extends Factory
      */
     public function definition()
     {
+        $colors = ['Red' => 0, 'Blue' => 1, 'Green' => 2];
+
         return [
-            'name' => $this->faker->word()
+            'name' => array_rand($colors)
         ];
     }
 }

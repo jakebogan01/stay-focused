@@ -8,7 +8,7 @@ use App\Models\Block;
 use App\Models\Color;
 use App\Models\Status;
 use App\Models\Category;
-use App\Models\PriorityRating;
+use App\Models\Priority;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -32,7 +32,7 @@ class DatabaseSeeder extends Seeder
 
         Category::factory()->count(3)->create();
         Color::factory()->count(3)->create();
-        PriorityRating::factory()->count(3)->create();
+        Priority::factory()->count(3)->create();
         Status::factory()->count(3)->create();
     }
 }
