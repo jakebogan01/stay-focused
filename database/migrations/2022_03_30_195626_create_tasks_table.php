@@ -19,13 +19,10 @@ return new class extends Migration
             $table->foreignId('color_id');
             $table->foreignId('priority_rating_id');
             $table->foreignId('status_id');
-            $table->string('status');
             $table->string('title');
             $table->text('description');
             $table->text('note');
-            $table->integer('priority_rating');
             $table->time('allotted_time');
-            $table->string('colors');
             $table->boolean('more_time');
             $table->softDeletes();
             $table->timestamps();
