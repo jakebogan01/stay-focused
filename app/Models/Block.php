@@ -12,6 +12,10 @@ class Block extends Model
     use HasFactory;
     use softDeletes;
 
+    protected $fillable = [
+        'starts_at'
+    ];
+
     /**
      * @return BelongsToMany
      */
