@@ -13,6 +13,9 @@ use Illuminate\Contracts\Foundation\Application;
 class BlockForm extends Component
 {
     public $start = '';
+    public $end = '';
+    //    1 by default
+    public $forgiven = true;
 
     /**
      * @return Redirector|Application|RedirectResponse
@@ -20,7 +23,9 @@ class BlockForm extends Component
     public function register(): Redirector|Application|RedirectResponse
     {
         Block::create([
-            'starts_at' => $this->start
+            'starts_at' => $this->start,
+            'ends_at' => $this->end,
+            'forgiving' => $this->forgiven,
         ]);
 
         return redirect(route('dashboard'));

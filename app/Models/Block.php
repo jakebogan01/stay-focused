@@ -13,7 +13,9 @@ class Block extends Model
     use softDeletes;
 
     protected $fillable = [
-        'starts_at'
+        'starts_at',
+        'ends_at',
+        'forgiving'
     ];
 
     /**
