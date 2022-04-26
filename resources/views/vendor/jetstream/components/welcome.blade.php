@@ -47,22 +47,22 @@
                         </tr>
                         </thead>
                         <tbody class="divide-y divide-gray-200 bg-white">
-                        @foreach($data['blocks'] as $info)
-                            <tr class="divide-x divide-gray-200">
-                                <td class="whitespace-nowrap py-4 pl-4 pr-4 text-sm font-medium text-gray-900 sm:pl-6">
-                                    {{ $info->id }}
-                                </td>
-                                <td class="whitespace-nowrap p-4 text-sm text-gray-500">
-                                    {{ $info->forgiving }}
-                                </td>
-                                <td class="whitespace-nowrap p-4 text-sm text-gray-500">
-                                    {{ $info->starts_at }}
-                                </td>
-                                <td class="whitespace-nowrap py-4 pl-4 pr-4 text-sm text-gray-500 sm:pr-6">
-                                    {{ $info->ends_at }}
-                                </td>
-                            </tr>
-                        @endforeach
+{{--                        @foreach($data['blocks'] as $info)--}}
+{{--                            <tr class="divide-x divide-gray-200">--}}
+{{--                                <td class="whitespace-nowrap py-4 pl-4 pr-4 text-sm font-medium text-gray-900 sm:pl-6">--}}
+{{--                                    {{ $info->id }}--}}
+{{--                                </td>--}}
+{{--                                <td class="whitespace-nowrap p-4 text-sm text-gray-500">--}}
+{{--                                    {{ $info->forgiving }}--}}
+{{--                                </td>--}}
+{{--                                <td class="whitespace-nowrap p-4 text-sm text-gray-500">--}}
+{{--                                    {{ $info->starts_at }}--}}
+{{--                                </td>--}}
+{{--                                <td class="whitespace-nowrap py-4 pl-4 pr-4 text-sm text-gray-500 sm:pr-6">--}}
+{{--                                    {{ $info->ends_at }}--}}
+{{--                                </td>--}}
+{{--                            </tr>--}}
+{{--                        @endforeach--}}
                         </tbody>
                     </table>
                 </div>
@@ -114,37 +114,37 @@
                         </tr>
                         </thead>
                         <tbody class="divide-y divide-gray-200 bg-white">
-                        @foreach($data['tasks'] as $info)
-                            <tr class="divide-x divide-gray-200">
-                                <td class="whitespace-nowrap py-4 pl-4 pr-4 text-sm font-medium text-gray-900 sm:pl-6">
-                                    {{ $info->id }}
-                                </td>
-                                <td class="whitespace-nowrap p-4 text-sm text-gray-500">
-                                    {{ $info->title }}
-                                </td>
-                                <td class="whitespace-nowrap p-4 text-sm text-gray-500">
-                                    {{ $info->description }}
-                                </td>
-                                <td class="whitespace-nowrap p-4 text-sm text-gray-500">
-                                    {{ $info->note }}
-                                </td>
-                                <td class="whitespace-nowrap p-4 text-sm text-gray-500">
-                                    {{ $info->category->name }}
-                                </td>
-                                <td class="whitespace-nowrap p-4 text-sm text-gray-500">
-                                    {{ $info->status->name }}
-                                </td>
-                                <td class="whitespace-nowrap p-4 text-sm text-gray-500">
-                                    {{ $info->priority->name }}
-                                </td>
-                                <td class="whitespace-nowrap p-4 text-sm text-gray-500">
-                                    {{ $info->color->name }}
-                                </td>
-                                <td class="whitespace-nowrap py-4 pl-4 pr-4 text-sm text-gray-500 sm:pr-6">
-                                    {{ $info->allotted_time }}
-                                </td>
-                            </tr>
-                        @endforeach
+{{--                        @foreach($data['tasks'] as $info)--}}
+{{--                            <tr class="divide-x divide-gray-200">--}}
+{{--                                <td class="whitespace-nowrap py-4 pl-4 pr-4 text-sm font-medium text-gray-900 sm:pl-6">--}}
+{{--                                    {{ $info->id }}--}}
+{{--                                </td>--}}
+{{--                                <td class="whitespace-nowrap p-4 text-sm text-gray-500">--}}
+{{--                                    {{ $info->title }}--}}
+{{--                                </td>--}}
+{{--                                <td class="whitespace-nowrap p-4 text-sm text-gray-500">--}}
+{{--                                    {{ $info->description }}--}}
+{{--                                </td>--}}
+{{--                                <td class="whitespace-nowrap p-4 text-sm text-gray-500">--}}
+{{--                                    {{ $info->note }}--}}
+{{--                                </td>--}}
+{{--                                <td class="whitespace-nowrap p-4 text-sm text-gray-500">--}}
+{{--                                    {{ $info->category->name }}--}}
+{{--                                </td>--}}
+{{--                                <td class="whitespace-nowrap p-4 text-sm text-gray-500">--}}
+{{--                                    {{ $info->status->name }}--}}
+{{--                                </td>--}}
+{{--                                <td class="whitespace-nowrap p-4 text-sm text-gray-500">--}}
+{{--                                    {{ $info->priority->name }}--}}
+{{--                                </td>--}}
+{{--                                <td class="whitespace-nowrap p-4 text-sm text-gray-500">--}}
+{{--                                    {{ $info->color->name }}--}}
+{{--                                </td>--}}
+{{--                                <td class="whitespace-nowrap py-4 pl-4 pr-4 text-sm text-gray-500 sm:pr-6">--}}
+{{--                                    {{ $info->allotted_time }}--}}
+{{--                                </td>--}}
+{{--                            </tr>--}}
+{{--                        @endforeach--}}
                         </tbody>
                     </table>
                 </div>

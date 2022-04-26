@@ -15,17 +15,17 @@ return new class extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('category_id');
-            $table->foreignId('color_id');
-            $table->foreignId('priority_id');
-            $table->foreignId('status_id');
+//            $table->foreignId('category_id');
+//            $table->foreignId('color_id');
+//            $table->foreignId('priority_id');
+//            $table->foreignId('status_id');
             $table->string('title');
             $table->text('description');
             $table->text('note');
-            $table->time('allotted_time');
-            $table->boolean('more_time');
-            $table->softDeletes();
-            $table->timestamps();
+//            $table->time('allotted_time');
+//            $table->boolean('more_time');
+//            $table->softDeletes();
+//            $table->timestamps();
         });
     }
 

@@ -25,15 +25,15 @@ class TaskFactory extends Factory
     public function definition()
     {
         return [
-            'category_id' => $this->faker->numberBetween(1, 3),
-            'color_id' => $this->faker->numberBetween(1, 3),
-            'priority_id' => $this->faker->numberBetween(1, 3),
-            'status_id' => $this->faker->numberBetween(1, 3),
+//            'category_id' => $this->faker->numberBetween(1, 3),
+//            'color_id' => $this->faker->numberBetween(1, 3),
+//            'priority_id' => $this->faker->numberBetween(1, 3),
+//            'status_id' => $this->faker->numberBetween(1, 3),
             'title' => $this->faker->words(3, true),
             'description' => $this->faker->sentence(),
             'note' => $this->faker->sentence(),
-            'allotted_time' => $this->faker->time('1:00:00'),
-            'more_time' => $this->faker->boolean(50),
+//            'allotted_time' => $this->faker->time('1:00:00'),
+//            'more_time' => $this->faker->boolean(50),
         ];
     }
 }

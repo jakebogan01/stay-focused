@@ -13,6 +13,12 @@ class Task extends Model
     use HasFactory;
     use softDeletes;
 
+    protected $fillable = [
+        'title',
+        'description',
+        'note'
+    ];
+
     /**
      * @return BelongsToMany
      */
