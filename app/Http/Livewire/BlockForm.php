@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Block;
+use App\Models\Task;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Redirector;
 use Livewire\Component;
@@ -17,15 +18,27 @@ class BlockForm extends Component
     //    1 by default
     public $forgiven = true;
 
+    public $title = '';
+    public $description = '';
+    public $note = '';
+    public $category = '';
+
     /**
      * @return Redirector|Application|RedirectResponse
      */
     public function register(): Redirector|Application|RedirectResponse
     {
-        Block::create([
-            'starts_at' => $this->start,
-            'ends_at' => $this->end,
-            'forgiving' => $this->forgiven,
+//        Block::create([
+//            'starts_at' => $this->start,
+//            'ends_at' => $this->end,
+//            'forgiving' => $this->forgiven,
+//        ]);
+
+        Task::create([
+            'title' => $this->title,
+            'description' => $this->description,
+            'note' => $this->note,
+            'category' => $this->category,
         ]);
 
         return redirect(route('dashboard'));
