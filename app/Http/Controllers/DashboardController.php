@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Task;
+use App\Models\Color;
 use App\Models\Block;
+use App\Models\Category;
+use App\Models\Priority;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -13,8 +16,11 @@ class DashboardController extends Controller
         $data = [
             'blocks' => Block::all(),
 //            'tasks' => Task::all(),
+            'categories' => Category::all(),
+            'colors' => Color::all(),
+            'priorities' => Priority::all(),
         ];
-//->with('data', $data)
-        return view('dashboard');
+        return view('dashboard')
+            ->with('data', $data);
     }
 }

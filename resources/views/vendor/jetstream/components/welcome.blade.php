@@ -12,7 +12,7 @@
             </div>
             <div class="mt-5 md:mt-0 md:col-span-2">
 
-                @livewire('block-form')
+                <livewire:block-form :data="$data">
 
             </div>
         </div>

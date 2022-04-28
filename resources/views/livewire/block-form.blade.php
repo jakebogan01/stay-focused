@@ -53,32 +53,32 @@
         <div class="col-span-6 sm:col-span-2">
             <label for="category" class="block text-sm font-medium text-gray-700">Category</label>
             <select wire:model="category" id="category" name="category" autocomplete="category" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                <option disabled selected value> -- select an option -- </option>
-                @php
-                    $categories = \App\Models\Category::all();
-                @endphp
+                <option disabled selected value></option>
                 @foreach($categories as $category)
                     <option>{{ $category->name }}</option>
                 @endforeach
             </select>
         </div>
 
-{{--        <div class="col-span-6 sm:col-span-2">--}}
-{{--            <label for="priority" class="block text-sm font-medium text-gray-700">Priority</label>--}}
-{{--            <select id="priority" name="priority" autocomplete="priority" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">--}}
-{{--                <option>High</option>--}}
-{{--                <option>Medium</option>--}}
-{{--                <option>Low</option>--}}
-{{--            </select>--}}
-{{--        </div>--}}
+        <div class="col-span-6 sm:col-span-2">
+            <label for="priority" class="block text-sm font-medium text-gray-700">Priority</label>
+            <select wire:model="priority" id="priority" name="priority" autocomplete="priority" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                <option disabled selected value></option>
+                @foreach($priorities as $priority)
+                    <option>{{ $priority->name }}</option>
+                @endforeach
+            </select>
+        </div>
 
-{{--        <div class="col-span-6 sm:col-span-2">--}}
-{{--            <label for="color" class="block text-sm font-medium text-gray-700">Color</label>--}}
-{{--            <select id="color" name="color" autocomplete="color" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">--}}
-{{--                <option>Red</option>--}}
-{{--                <option>Blue</option>--}}
-{{--            </select>--}}
-{{--        </div>--}}
+        <div class="col-span-6 sm:col-span-2">
+            <label for="color" class="block text-sm font-medium text-gray-700">Color</label>
+            <select wire:model="color" id="color" name="color" autocomplete="color" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                <option disabled selected value></option>
+                @foreach($colors as $color)
+                    <option>{{ $color->name }}</option>
+                @endforeach
+            </select>
+        </div>
 
 {{--        <div class="col-span-6">--}}
 {{--            <div x-data="{ time: 60 }" class="w-full">--}}
