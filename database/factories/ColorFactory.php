@@ -24,7 +24,10 @@ class ColorFactory extends Factory
      */
     public function definition()
     {
-        $colors = ['Red' => 0, 'Blue' => 1, 'Green' => 2];
+        $colors = [
+            'Red' => 0,
+            'Blue' => 1
+        ];
 
         return [
             'name' => array_rand($colors)

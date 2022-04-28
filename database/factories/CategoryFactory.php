@@ -24,7 +24,12 @@ class CategoryFactory extends Factory
      */
     public function definition()
     {
-        $categories = ['Development' => 0, 'Production' => 1, 'Front End' => 2, 'Back End' => 3];
+        $categories = [
+            'Development' => 0,
+            'Production' => 1,
+            'Sales' => 2,
+            'Emails' => 3
+        ];
 
         return [
             'name' => array_rand($categories)

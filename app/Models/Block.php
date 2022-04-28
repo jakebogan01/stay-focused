@@ -2,15 +2,28 @@
 
 namespace App\Models;
 
+use Eloquent;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
+/**
+ * @mixin Eloquent
+ */
 class Block extends Model
 {
     use HasFactory;
     use softDeletes;
+
+    /**
+     * @var string[]
+     */
+    protected $fillable = [
+        'starts_at',
+        'ends_at',
+        'forgiving'
+    ];
 
     /**
      * @return BelongsToMany

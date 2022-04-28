@@ -24,7 +24,11 @@ class PriorityFactory extends Factory
      */
     public function definition()
     {
-        $ratings = ['High' => 0, 'Medium' => 1, 'Low' => 2];
+        $ratings = [
+            'High' => 0,
+            'Medium' => 1,
+            'Low' => 2
+        ];
 
         return [
             'name' => array_rand($ratings),

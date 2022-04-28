@@ -24,7 +24,11 @@ class StatusFactory extends Factory
      */
     public function definition()
     {
-        $statuses = ['Completed' => 0, 'In Progress' => 1, 'Pending' => 2];
+        $statuses = [
+            'Completed' => 0,
+            'In Progress' => 1,
+            'Pending' => 2
+        ];
 
         return [
             'name' => array_rand($statuses),

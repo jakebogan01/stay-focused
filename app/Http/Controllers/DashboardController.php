@@ -12,9 +12,9 @@ class DashboardController extends Controller
     {
         $data = [
             'blocks' => Block::all(),
-            'tasks' => Task::all(),
+//            'tasks' => Task::all(),
         ];
-
-        return view('dashboard')->with('data', $data);
+//->with('data', $data)
+        return view('dashboard');
     }
 }
