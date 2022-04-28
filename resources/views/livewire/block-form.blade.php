@@ -53,10 +53,13 @@
         <div class="col-span-6 sm:col-span-2">
             <label for="category" class="block text-sm font-medium text-gray-700">Category</label>
             <select wire:model="category" id="category" name="category" autocomplete="category" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
-                <option>Development</option>
-                <option>Production</option>
-                <option>Front End</option>
-                <option>Back End</option>
+                <option disabled selected value> -- select an option -- </option>
+                @php
+                    $categories = \App\Models\Category::all();
+                @endphp
+                @foreach($categories as $category)
+                    <option>{{ $category->name }}</option>
+                @endforeach
             </select>
         </div>
 

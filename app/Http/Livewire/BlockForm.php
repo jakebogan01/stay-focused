@@ -2,26 +2,28 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Block;
+use App\Models\Category;
 use App\Models\Task;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Routing\Redirector;
+use App\Models\Block;
 use Livewire\Component;
+use Illuminate\Routing\Redirector;
 use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\Foundation\Application;
 
 class BlockForm extends Component
 {
-    public $start = '';
-    public $end = '';
-    //    1 by default
-    public $forgiven = true;
+    // block form
+    public string $start = '';
+    public string $end = '';
+    public bool $forgiven = true;
 
-    public $title = '';
-    public $description = '';
-    public $note = '';
-    public $category = '';
+    // task form
+    public string $title = '';
+    public string $description = '';
+    public string $note = '';
+    public string $category = '';
 
     /**
      * @return Redirector|Application|RedirectResponse
@@ -38,7 +40,7 @@ class BlockForm extends Component
             'title' => $this->title,
             'description' => $this->description,
             'note' => $this->note,
-            'category' => $this->category,
+            'category_id' =>  Category::where('name', $this->category)->first()->id
         ]);
 
         return redirect(route('dashboard'));

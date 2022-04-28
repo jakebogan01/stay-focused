@@ -17,6 +17,9 @@ class Task extends Model
     use HasFactory;
     use softDeletes;
 
+    /**
+     * @var string[]
+     */
     protected $fillable = [
         'category_id',
         'title',

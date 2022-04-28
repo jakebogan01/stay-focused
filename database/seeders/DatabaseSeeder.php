@@ -10,6 +10,7 @@ use App\Models\Status;
 use App\Models\Category;
 use App\Models\Priority;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -30,9 +31,88 @@ class DatabaseSeeder extends Seeder
             ->count(2)
             ->create();
 
-        Category::factory()->count(3)->create();
-        Color::factory()->count(3)->create();
-        Priority::factory()->count(3)->create();
-        Status::factory()->count(3)->create();
+        // general user: test
+        User::create([
+            'role' => 'Admin',
+            'name' => 'test',
+            'email' => 'test@gmail.com',
+            'password' => bcrypt('12345678'),
+        ]);
+
+        // default categories
+        DB::table('categories')->insert([
+            [
+                'name' => 'Development',
+                'created_at' => NOW(),
+                'updated_at' => NOW()
+            ],
+            [
+                'name' => 'Production',
+                'created_at' => NOW(),
+                'updated_at' => NOW()
+            ],
+            [
+                'name' => 'Sales',
+                'created_at' => NOW(),
+                'updated_at' => NOW()
+            ],
+            [
+                'name' => 'Emails',
+                'created_at' => NOW(),
+                'updated_at' => NOW()
+            ]
+        ]);
+
+        // default colors
+        DB::table('colors')->insert([
+            [
+                'name' => 'Red',
+                'created_at' => NOW(),
+                'updated_at' => NOW()
+            ],
+            [
+                'name' => 'Blue',
+                'created_at' => NOW(),
+                'updated_at' => NOW()
+            ]
+        ]);
+
+        // default priorities
+        DB::table('priorities')->insert([
+            [
+                'name' => 'High',
+                'created_at' => NOW(),
+                'updated_at' => NOW()
+            ],
+            [
+                'name' => 'Medium',
+                'created_at' => NOW(),
+                'updated_at' => NOW()
+            ],
+            [
+                'name' => 'Low',
+                'created_at' => NOW(),
+                'updated_at' => NOW()
+            ]
+        ]);
+
+        // default statuses
+        DB::table('statuses')->insert([
+            [
+                'name' => 'Pending',
+                'created_at' => NOW(),
+                'updated_at' => NOW()
+            ],
+            [
+                'name' => 'In Progress',
+                'created_at' => NOW(),
+                'updated_at' => NOW()
+            ],
+            [
+                'name' => 'Completed',
+                'created_at' => NOW(),
+                'updated_at' => NOW()
+            ]
+        ]);
     }
 }

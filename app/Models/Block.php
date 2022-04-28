@@ -16,6 +16,9 @@ class Block extends Model
     use HasFactory;
     use softDeletes;
 
+    /**
+     * @var string[]
+     */
     protected $fillable = [
         'starts_at',
         'ends_at',
