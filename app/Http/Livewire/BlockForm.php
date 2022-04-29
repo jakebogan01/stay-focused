@@ -21,7 +21,6 @@ class BlockForm extends Component
     // block form
     public string $start = '';
     public string $end = '';
-    public bool $forgiven = true;
 
     // task form
     public string $title = '';
@@ -30,6 +29,8 @@ class BlockForm extends Component
     public string $category = '';
     public string $priority = '';
     public string $color = '';
+    public string $time = '';
+    public bool $moretime = true;
 
     /**
      * @param $data
@@ -47,11 +48,10 @@ class BlockForm extends Component
      */
     public function register(): Redirector|Application|RedirectResponse
     {
-//        Block::create([
-//            'starts_at' => $this->start,
-//            'ends_at' => $this->end,
-//            'forgiving' => $this->forgiven,
-//        ]);
+        Block::create([
+            'starts_at' => $this->start,
+            'ends_at' => $this->end,
+        ]);
 
         Task::create([
             'title' => $this->title,
@@ -60,6 +60,8 @@ class BlockForm extends Component
             'category_id' =>  $this->categories->where('name', $this->category)->first()->id,
             'priority_id' =>  $this->priorities->where('name', $this->priority)->first()->id,
             'color_id' =>  $this->colors->where('name', $this->color)->first()->id,
+            'allotted_time' =>  $this->time,
+            'more_time' => $this->moretime,
         ]);
 
         return redirect(route('dashboard'));

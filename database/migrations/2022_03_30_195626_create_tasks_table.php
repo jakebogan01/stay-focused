@@ -22,8 +22,8 @@ return new class extends Migration
             $table->string('title');
             $table->text('description');
             $table->text('note');
-//            $table->time('allotted_time');
-//            $table->boolean('more_time');
+            $table->integer('allotted_time');
+            $table->boolean('more_time');
             $table->timestamps();
             $table->softDeletes();
         });

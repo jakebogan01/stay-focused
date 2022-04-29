@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('blocks', function (Blueprint $table) {
             $table->id();
-            $table->boolean('forgiving');
             $table->time('starts_at');
             $table->time('ends_at');
             $table->timestamps();

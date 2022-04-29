@@ -22,7 +22,6 @@ class Block extends Model
     protected $fillable = [
         'starts_at',
         'ends_at',
-        'forgiving'
     ];
 
     /**

@@ -26,7 +26,9 @@ class Task extends Model
         'color_id',
         'title',
         'description',
-        'note'
+        'note',
+        'allotted_time',
+        'more_time',
     ];
 
     /**

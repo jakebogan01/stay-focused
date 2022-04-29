@@ -15,7 +15,7 @@ class DashboardController extends Controller
     {
         $data = [
             'blocks' => Block::all(),
-//            'tasks' => Task::all(),
+            'tasks' => Task::all(),
             'categories' => Category::all(),
             'colors' => Color::all(),
             'priorities' => Priority::all(),

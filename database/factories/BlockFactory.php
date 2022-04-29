@@ -25,7 +25,6 @@ class BlockFactory extends Factory
     public function definition()
     {
         return [
-            'forgiving' => $this->faker->boolean(50),
             'starts_at' => $this->faker->time('20:00:00'),
             'ends_at' => $this->faker->time('21:00:00'),
         ];
