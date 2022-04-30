@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full bg-gray-100">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,7 +15,7 @@
 
         <!-- Styles -->
     </head>
-    <body class="body antialiased">
+    <body class="body antialiased h-full">
 
         <p class="text-5xl text-center mt-14 text-white"> Stay Focused</p>
 
