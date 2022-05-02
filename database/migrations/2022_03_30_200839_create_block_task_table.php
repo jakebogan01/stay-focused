@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('task_block', function (Blueprint $table) {
+        Schema::create('block_task', function (Blueprint $table) {
             $table->foreignId('block_id')
                 ->constrained()
                 ->onDelete('cascade');
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('task_block');
+        Schema::dropIfExists('block_task');
     }
 };

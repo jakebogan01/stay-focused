@@ -16,8 +16,10 @@ return new class extends Migration
         Schema::create('block_user', function (Blueprint $table) {
             $table->foreignId('user_id')
                 ->constrained()
-                ->onDelete('cascade');
-            $table->foreignId('block_id');
+                ->cascadeOnDelete();
+            $table->foreignId('block_id')
+                ->constrained()
+                ->cascadeOnDelete();
             $table->timestamps();
             $table->softDeletes();
         });

@@ -25,8 +25,8 @@ class BlockFactory extends Factory
     public function definition()
     {
         return [
-            'starts_at' => $this->faker->time('20:00:00'),
-            'ends_at' => $this->faker->time('21:00:00'),
+            'starts_at' => $this->faker->time('H:i:s'),
+            'ends_at' => $this->faker->time('H:i:s'),
         ];
     }
 }

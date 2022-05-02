@@ -73,4 +73,16 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Block::class, 'block_user', 'user_id', 'block_id');
     }
+
+    /**
+     * @return void
+     */
+    public static function boot()
+    {
+        parent::boot();
+
+        static::deleting(function ($user) {
+            $user->blocks()->detach();
+        });
+    }
 }

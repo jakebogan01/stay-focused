@@ -37,6 +37,6 @@ class Block extends Model
      */
     public function tasks(): BelongsToMany
     {
-        return $this->belongsToMany(Task::class, 'task_block', 'block_id', 'task_id');
+        return $this->belongsToMany(Task::class, 'block_task', 'block_id', 'task_id');
     }
 }
