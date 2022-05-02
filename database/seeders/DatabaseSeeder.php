@@ -21,16 +21,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-//        User::factory()
-//            ->hasAttached(Block::factory()->count(5))
-//            ->count(2)
-//            ->create();
-//
-//        Block::factory()
-//            ->hasAttached(Task::factory()->count(5))
-//            ->count(2)
-//            ->create();
-
         // general user: test
         User::create([
             'role' => 'Admin',
@@ -114,5 +104,15 @@ class DatabaseSeeder extends Seeder
                 'updated_at' => NOW()
             ]
         ]);
+
+//        User::factory()
+//            ->hasAttached(Block::factory()->count(5))
+//            ->count(2)
+//            ->create();
+
+//        Block::factory()
+//            ->hasAttached(Task::factory()->count(5))
+//            ->count(2)
+//            ->create();
     }
 }

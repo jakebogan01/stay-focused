@@ -26,7 +26,7 @@ class TaskFactory extends Factory
     {
         return [
             'category_id' => $this->faker->numberBetween(1, 3),
-            'color_id' => $this->faker->numberBetween(1, 3),
+            'color_id' => $this->faker->numberBetween(1, 2),
             'priority_id' => $this->faker->numberBetween(1, 3),
 //            'status_id' => $this->faker->numberBetween(1, 3),
             'title' => $this->faker->words(3, true),
