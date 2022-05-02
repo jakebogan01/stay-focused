@@ -230,8 +230,11 @@
                                 <svg class="mr-4 flex-shrink-0 h-6 w-6 text-cyan-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                                 </svg>
-                                Reports
+                                <span class="flex-1">Reports</span>
+                                <!-- Current: "bg-gray-800", Default: "bg-gray-900 group-hover:bg-gray-800" -->
+                                <span class="bg-cyan-600 group-hover:bg-cyan-700 ml-3 inline-block py-0.5 px-3 text-xs font-medium rounded-full"> 3 </span>
                             </a>
+
                         </div>
                         <div class="mt-6 pt-6">
                             <div class="px-2 space-y-1">
