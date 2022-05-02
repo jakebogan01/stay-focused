@@ -5,11 +5,14 @@
         <div class="col-span-1 ">
             <label for="time-start" class="block text-sm font-medium text-gray-700">Time Start</label>
             <input wire:model="start" type="time" id="time" name="time" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm sm:text-sm border-gray-300 rounded-md">
+            @error('start') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
         </div>
 
         <div class="col-span-1">
             <label for="time-start" class="block text-sm font-medium text-gray-700">Time End</label>
             <input wire:model="end" type="time" id="time" name="time" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm sm:text-sm border-gray-300 rounded-md">
+            @error('end') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
+
         </div>
     </div>
 
@@ -18,13 +21,16 @@
         <div class="col-span-6">
             <label for="title" class="block text-sm font-medium text-gray-700">Title</label>
             <input wire:model="title" type="text" name="title" id="title" autocomplete="title" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+            @error('title') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
         </div>
+
 
         <div class="col-span-6">
             <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
             <div class="mt-1">
                 <textarea wire:model="description" id="description" name="description" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md"></textarea>
             </div>
+            @error('description') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
         </div>
 
         <div class="col-span-6">
@@ -32,6 +38,7 @@
             <div class="mt-1">
                 <textarea wire:model="note" id="notes" name="notes" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md"></textarea>
             </div>
+            @error('note') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
         </div>
 
         <div class="col-span-6 sm:col-span-2">
@@ -42,6 +49,7 @@
                     <option>{{ $category->name }}</option>
                 @endforeach
             </select>
+            @error('category') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
         </div>
 
         <div class="col-span-6 sm:col-span-2">
@@ -52,6 +60,7 @@
                     <option>{{ $priority->name }}</option>
                 @endforeach
             </select>
+            @error('priority') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
         </div>
 
         <div class="col-span-6 sm:col-span-2">
@@ -62,6 +71,7 @@
                     <option>{{ $color->name }}</option>
                 @endforeach
             </select>
+            @error('color') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
         </div>
 
         <div class="col-span-6">
