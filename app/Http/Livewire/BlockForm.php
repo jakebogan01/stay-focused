@@ -32,8 +32,8 @@ class BlockForm extends Component
     public string $time = '';
     public bool $moretime = true;
 
-            // Validation on Creating a Block
-        protected $rules = [
+    // Validation on Creating a Block
+    protected array $rules = [
         'start' => 'required',
         'end' => 'required',
         'title' => 'required|max:100',
@@ -42,9 +42,7 @@ class BlockForm extends Component
         'category' =>  'required',
         'priority' =>  'required',
         'color' =>  'required',
-//        'moretime' =>  'required',
-        ];
-
+    ];
 
     /**
      * @param $data
@@ -57,9 +55,12 @@ class BlockForm extends Component
         $this->priorities = $data['priorities'];
     }
 
-    public function updated()
+    /**
+     * @return void
+     */
+    public function updated($propertyTitle)
     {
-        $this->validateOnly();
+        $this->validateOnly($propertyTitle);
     }
 
     /**
@@ -84,7 +85,6 @@ class BlockForm extends Component
             'allotted_time' =>  $this->time,
             'more_time' => $this->moretime,
         ]);
-
 
         return redirect(route('dashboard'));
     }
