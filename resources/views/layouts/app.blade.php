@@ -39,9 +39,11 @@
 {{--            </main>--}}
 {{--        </div>--}}
 
-        <div class="min-h-full">
+        <div class="min-h-full"
+        x-data="{ navClosed: false }">
             <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
-            <div class="fixed inset-0 flex z-40 lg:hidden" role="dialog" aria-modal="true">
+            <div class="fixed inset-0 flex z-40 lg:hidden" role="dialog" aria-modal="true"
+                 x-show.transition="navClosed">
                 <!--
                   Off-canvas menu overlay, show/hide based on off-canvas menu state.
 
@@ -52,7 +54,9 @@
                     From: "opacity-100"
                     To: "opacity-0"
                 -->
-                <div class="fixed inset-0 bg-gray-600 bg-opacity-75" aria-hidden="true"></div>
+                <div class="fixed inset-0 bg-gray-600 bg-opacity-75" aria-hidden="true"
+                     x-show.transition="navClosed"
+                    x-cloak></div>
 
                 <!--
                   Off-canvas menu, show/hide based on off-canvas menu state.
@@ -64,7 +68,9 @@
                     From: "translate-x-0"
                     To: "-translate-x-full"
                 -->
-                <div class="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-cyan-700">
+                <div class="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-cyan-700"
+                x-show.transition="navClosed"
+                x-cloak>
                     <!--
                       Close button, show/hide based on off-canvas menu state.
 
@@ -76,7 +82,8 @@
                         To: "opacity-0"
                     -->
                     <div class="absolute top-0 right-0 -mr-12 pt-2">
-                        <button type="button" class="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                        <button type="button" class="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        @click="navClosed = false">
                             <span class="sr-only">Close sidebar</span>
                             <!-- Heroicon name: outline/x -->
                             <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -170,7 +177,8 @@
                     </nav>
                 </div>
 
-                <div class="flex-shrink-0 w-14" aria-hidden="true">
+                <div class="flex-shrink-0 w-14" aria-hidden="true"
+                x-show="navClosed">
                     <!-- Dummy element to force sidebar to shrink to fit close icon -->
                 </div>
             </div>
@@ -439,8 +447,8 @@
                                     }],
                                 }
                             }
-                        }">
-                            <div x-ref="chart" class="bg-white rounded-lg p-8 max-w-screen-sm"></div>
+                        }" class="max-w-6xl mx-auto lg:px-8">
+                            <div x-ref="chart" class="bg-white rounded-lg py-9 mx-auto max-w-screen-sm"></div>
                         </div>
 
                         <h2 class="max-w-6xl mx-auto mt-8 px-4 text-lg leading-6 font-medium text-gray-900 sm:px-6 lg:px-8">Recent activity</h2>

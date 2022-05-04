@@ -29,7 +29,7 @@ class BlockForm extends Component
     public string $category = '';
     public string $priority = '';
     public string $color = '';
-    public string $time = '';
+    public int $time = 60;
     public bool $moretime = true;
 
     // Validation on Creating a Block

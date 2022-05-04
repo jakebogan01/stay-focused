@@ -105,14 +105,14 @@ class DatabaseSeeder extends Seeder
             ]
         ]);
 
-        User::factory()
-            ->hasAttached(
-                Block::factory()
-                    ->hasAttached(Task::factory()->count(5))
-                    ->count(2)
-                    ->create()
-            )
-            ->count(2)
-            ->create();
+//        User::factory()
+//            ->hasAttached(
+//                Block::factory()
+//                    ->hasAttached(Task::factory()->count(5))
+//                    ->count(2)
+//                    ->create()
+//            )
+//            ->count(2)
+//            ->create();
     }
 }

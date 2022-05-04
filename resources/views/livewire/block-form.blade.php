@@ -1,16 +1,16 @@
 <form action="#" wire:submit.prevent="register">
     <legend class="text-base font-semibold text-gray-900">Block</legend>
 
-    <div class="grid grid-cols-6 gap-6 mt-6">
-        <div class="col-span-1 ">
+    <div class="grid grid-cols-2 gap-6 mt-6">
+        <div class="col-span-1">
             <label for="time-start" class="block text-sm font-medium text-gray-700">Time Start</label>
-            <input wire:model="start" type="time" id="time" name="time" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm sm:text-sm border-gray-300 rounded-md">
+            <input wire:model="start" type="time" id="time" name="time" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm sm:text-sm border-gray-300 rounded-md w-full">
             @error('start') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
         </div>
 
         <div class="col-span-1">
             <label for="time-start" class="block text-sm font-medium text-gray-700">Time End</label>
-            <input wire:model="end" type="time" id="time" name="time" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm sm:text-sm border-gray-300 rounded-md">
+            <input wire:model="end" type="time" id="time" name="time" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm sm:text-sm border-gray-300 rounded-md w-full">
             @error('end') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
 
         </div>
