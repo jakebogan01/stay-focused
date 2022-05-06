@@ -70,12 +70,12 @@ class BlockForm extends Component
     {
         $this->validate();
 
-        Block::create([
+        auth()->user()->blocks()->create([
             'starts_at' => $this->start,
             'ends_at' => $this->end,
         ]);
 
-        Task::create([
+        auth()->user()->blocks()->first()->tasks()->create([
             'title' => $this->title,
             'description' => $this->description,
             'note' => $this->note,
