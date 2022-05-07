@@ -1,23 +1,34 @@
-<div class="space-y-6">
-    <div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
-        <div class="md:grid md:grid-cols-3 md:gap-6">
-            <div class="md:col-span-1">
-                <h3 class="text-lg font-medium leading-6 text-gray-900">Test Form</h3>
-                <p class="mt-1 text-sm text-gray-500">
-                    This form usage is to test the creation of tasks.
-                </p>
-                <div class="h-full flex items-center justify-center">
-                    <img src="https://www.stickers-factory.com/media/catalog/product/cache/1/image/1000x/040ec09b1e35df139433887a97daa66f/1/8/18942_00.png" alt="Testing in progress" class="-mt-24">
-                </div>
-            </div>
-            <div class="mt-5 md:mt-0 md:col-span-2">
+<div class="flex justify-center">
+    <div
+        x-show="openModal"
+        style="display: none"
+        x-on:keydown.escape.prevent.stop="openModal = false"
+        role="dialog"
+        aria-modal="true"
+        x-id="['modal-title']"
+        :aria-labelledby="$id('modal-title')"
+        class="fixed inset-0 overflow-y-auto z-50"
+    >
+        <div x-show="openModal" x-transition.opacity class="fixed inset-0 bg-black bg-opacity-50"></div>
 
-                <livewire:block-form :data="$data">
-
+        <div
+            x-show="openModal" x-transition
+            x-on:click="openModal = false"
+            class="relative min-h-screen flex items-center justify-center p-4"
+        >
+            <div
+                x-on:click.stop
+                x-trap.noscroll.inert="open"
+                class="relative max-w-3xl w-full bg-white rounded-xl shadow-lg p-12 overflow-y-auto">
+                <h3 class="text-xl font-bold leading-6 text-gray-900 mb-6">
+                    Test Form
+                </h3>
+                <livewire:block-form :data="$data" />
             </div>
         </div>
     </div>
 </div>
+
 
 <div class="mt-10 px-4 sm:px-6 lg:px-8">
     <div class="sm:flex sm:items-center">

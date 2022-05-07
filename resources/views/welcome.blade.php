@@ -22,34 +22,15 @@
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body class="antialiased h-full">
-
-{{--        <p class="text-5xl text-center mt-14 text-white"> Stay Focused</p>--}}
-
-{{--        @if (Route::has('login'))--}}
-{{--            <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">--}}
-{{--                @auth--}}
-{{--                    <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>--}}
-{{--                @else--}}
-{{--                    <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>--}}
-
-{{--                    @if (Route::has('register'))--}}
-{{--                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>--}}
-{{--                    @endif--}}
-{{--                @endauth--}}
-{{--            </div>--}}
-{{--        @endif--}}
-
         <div class="bg-white min-h-full flex flex-col lg:relative">
             <div class="flex-grow flex flex-col">
                 <main class="flex-grow flex flex-col bg-white">
                     <div class="flex-grow mx-auto max-w-7xl w-full flex flex-col px-4 sm:px-6 lg:px-8">
                         <div class="flex-shrink-0 pt-10 sm:pt-16">
-                            <a href="/" class="inline-flex">
-                                <span class="sr-only">Workflow</span>
-                                <img class="h-12 w-auto" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600" alt="logo">
-                            </a>
+                            <span class="sr-only">Stay Focused</span>
+                            <img class="h-12 w-auto" src="/img/logo-home-page.svg" alt="logo">
                         </div>
-                        <div class="flex-shrink-0 my-auto py-16 sm:py-32">
+                        <div class="flex-shrink-0 my-auto py-16 sm:py-32 cursor-default">
                             <p class="flex items-center text-sm font-semibold text-indigo-600 tracking-wide">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="mr-1 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -100,7 +81,7 @@
                 </main>
             </div>
             <div class="hidden lg:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-                <img class="absolute inset-0 h-full w-full object-cover" src="https://static.wixstatic.com/media/ba0b8d_81aa740dfe3043bfb9ffc3fe8da2e531~mv2.png" alt="creating projects">
+                <img class="absolute inset-0 h-full w-full object-cover" src="/img/home-wallpaper.png" alt="creating projects">
             </div>
         </div>
 

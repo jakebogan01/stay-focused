@@ -72,7 +72,7 @@
                 @endforeach
             </select>
             @error('color') <div class="mt-1 text-red-500 text-sm">{{ $message }}</div> @enderror
-        </div>
+    </div>
 
         <div class="col-span-6">
             <div x-data="{ time: 60 }" class="w-full">
@@ -97,5 +97,8 @@
         </div>
     </fieldset>
 
+    <button type="button" class="mt-10 inline-flex justify-center py-2 px-4 border border-indigo-500 hover:border-indigo-400 hover:text-indigo-400 shadow-sm text-sm font-semibold rounded-md text-indigo-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" x-on:click="openModal = false">
+        Cancel
+    </button>
     <input type="submit" value="Submit" class="mt-10 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-semibold rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
 </form>
