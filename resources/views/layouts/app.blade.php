@@ -131,7 +131,7 @@
             </div>
 
             <!-- Static sidebar for desktop -->
-            <div class="hidden lg:flex lg:w-64 lg:flex-col lg:fixed lg:inset-y-0">
+            <div class="relative hidden lg:flex lg:w-64 lg:flex-col lg:fixed lg:inset-y-0">
                 <!-- Sidebar component, swap this element with another sidebar if you like -->
                 <div class="flex flex-col flex-grow bg-[#242235] pt-5 pb-4 overflow-y-auto">
                     <div class="flex items-center flex-shrink-0 px-4">

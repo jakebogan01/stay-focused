@@ -15,22 +15,33 @@ use Illuminate\Http\Request;
 class DashboardController extends Controller
 {
     /**
-     * @return Application|Factory|View
+     * @return array
      */
-    public function index()
+    public function data(): array
     {
-        $data = [
+        return [
             'blocks' => Block::all(),
             'tasks' => Task::all(),
             'categories' => Category::all(),
             'colors' => Color::all(),
             'priorities' => Priority::all(),
         ];
+    }
+
+    /**
+     * @return Application|Factory|View
+     */
+    public function index()
+    {
+        $data = $this->data();
+
         return view('dashboard', compact('data'));
     }
 
     public function focus()
     {
-        return view('focus');
+        $data = $this->data();
+
+        return view('focus', compact('data'));
     }
 }
