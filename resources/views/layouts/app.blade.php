@@ -196,5 +196,7 @@
         @stack('modals')
 
         @livewireScripts
+
+        <x-conditioned-time></x-conditioned-time>
     </body>
 </html>
