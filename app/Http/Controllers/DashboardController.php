@@ -20,8 +20,8 @@ class DashboardController extends Controller
     public function data(): array
     {
         return [
-            'blocks' => Block::all(),
-            'tasks' => Task::all(),
+            'blocks' => auth()->user()->blocks,
+            'tasks' => auth()->user()->blocks()->first()->tasks,
             'categories' => Category::all(),
             'colors' => Color::all(),
             'priorities' => Priority::all(),

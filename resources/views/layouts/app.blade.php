@@ -193,10 +193,13 @@
             </div>
         </div>
 
+        <x-start-time-modal></x-start-time-modal>
+        <x-end-time-modal></x-end-time-modal>
+
+        <x-conditioned-time></x-conditioned-time>
+
         @stack('modals')
 
         @livewireScripts
-
-        <x-conditioned-time></x-conditioned-time>
     </body>
 </html>

@@ -11,6 +11,7 @@ class ConditionedTime extends Component
 {
     public mixed $startTime = '';
     public mixed $endTime = '';
+    public $moreTime = 0;
 
     /**
      * Create a new component instance.
@@ -21,10 +22,14 @@ class ConditionedTime extends Component
     {
         if(auth()->user()->blocks()->first()) {
             $this->startTime = auth()->user()->blocks()->first()->starts_at;
-
             $time = $this->startTime;
             $time = Carbon::parse($time);
-            $this->endTime = $time->addSeconds(auth()->user()->blocks()->first()->tasks->first()->allotted_time)->format('H:i:s');
+
+            if(auth()->user()->blocks()->first()->tasks->first()->more_time == true) {
+                $this->moreTime = 15;
+            }
+
+            $this->endTime = $time->addMinutes(auth()->user()->blocks()->first()->tasks->first()->allotted_time + $this->moreTime)->format('H:i:s');
         }
     }
 
